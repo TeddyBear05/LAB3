@@ -1,5 +1,5 @@
 Use FUH_COMPANY;
---Câu 27:
+--CÃ¢u 27:
 SELECT 
     p.proNum, 
     p.proName, 
@@ -11,7 +11,7 @@ JOIN
 GROUP BY 
     p.proNum, 
     p.proName;
---Câu 28:
+--CÃ¢u 28:
 WITH ProjectMemberCount AS (
     SELECT 
         w.proNum, 
@@ -36,7 +36,7 @@ WHERE
         SELECT MIN(MemberCount)
         FROM ProjectMemberCount
     );
---Câu 29:
+--CÃ¢u 29:
 WITH ProjectMemberCount AS (
     SELECT 
         w.proNum, 
@@ -61,7 +61,7 @@ WHERE
         SELECT MAX(MemberCount)
         FROM ProjectMemberCount
     );
---Câu 30:
+--CÃ¢u 30:
 WITH ProjectTotalHours AS (
     SELECT 
         w.proNum, 
@@ -86,7 +86,7 @@ WHERE
         SELECT MIN(TotalHours)
         FROM ProjectTotalHours
     );
---Câu 31:
+--CÃ¢u 31:
 WITH ProjectTotalHours AS (
     SELECT 
         w.proNum, 
@@ -111,7 +111,7 @@ WHERE
         SELECT MAX(TotalHours)
         FROM ProjectTotalHours
     );
---Câu 32:
+--CÃ¢u 32:
 SELECT
     l.locName,
     COUNT(DISTINCT p.depNum) AS NumberOfDepartments
@@ -121,7 +121,7 @@ LEFT JOIN
     tblProject p ON l.locNum = p.locNum
 GROUP BY
     l.locName;
---Câu 33:
+--CÃ¢u 33:
 SELECT 
     d.depNum, 
     d.depName, 
@@ -132,7 +132,7 @@ LEFT JOIN
     tblProject p ON d.depNum = p.depNum
 GROUP BY 
     d.depNum, d.depName;
---Câu 34:
+--CÃ¢u 34:
 SELECT TOP 1
     d.depNum,
     d.depName,
@@ -145,7 +145,7 @@ GROUP BY
     d.depNum, d.depName
 ORDER BY
     COUNT(p.locNum) DESC;
---Câu 35:
+--CÃ¢u 35:
 SELECT TOP 1
     d.depNum,
     d.depName,
@@ -158,7 +158,7 @@ GROUP BY
     d.depNum, d.depName
 ORDER BY
     COUNT(p.locNum) ASC;
---Câu 36:
+--CÃ¢u 36:
 SELECT TOP 1
     l.locName,
     COUNT(d.depNum) AS NumberOfDepartments
@@ -172,7 +172,7 @@ GROUP BY
     l.locName
 ORDER BY
     COUNT(d.depNum) DESC;
---Câu 37:
+--CÃ¢u 37:
 SELECT TOP 1
     l.locName,
     COUNT(d.depNum) AS NumberOfDepartments
@@ -186,7 +186,7 @@ GROUP BY
     l.locName
 ORDER BY
     COUNT(d.depNum) ASC;
---Câu 38:
+--CÃ¢u 38:
 SELECT TOP 1
     e.empSSN,
     e.empName,
@@ -199,7 +199,7 @@ GROUP BY
     e.empSSN, e.empName
 ORDER BY
     COUNT(d.empSSN) DESC;
---Câu 39:
+--CÃ¢u 39:
 SELECT TOP 1
     e.empSSN,
     e.empName,
