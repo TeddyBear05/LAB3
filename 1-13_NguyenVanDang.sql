@@ -4,7 +4,7 @@ FROM tblEmployee e
 JOIN tblDepartment d ON e.depNum = d.depNum
 WHERE d.depName = N'Phòng Nghiên cứu và phát triển';
 --2
-SELECT p.proNum, p.proNAME 
+SELECT p.proNum, p.proNAME ,d.depName
 FROM tblProject p
 JOIN tblDepartment d ON p.depNum = d.depNum
 WHERE d.depName = N'Phòng Nghiên cứu và phát triển';
