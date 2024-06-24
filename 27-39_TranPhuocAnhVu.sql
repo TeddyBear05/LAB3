@@ -187,7 +187,7 @@ GROUP BY
 ORDER BY
     COUNT(d.depNum) ASC;
 --Câu 38:
-SELECT TOP 1
+SELECT TOP 1 with ties
     e.empSSN,
     e.empName,
     COUNT(d.empSSN) AS NumberOfDependents
@@ -200,7 +200,7 @@ GROUP BY
 ORDER BY
     COUNT(d.empSSN) DESC;
 --Câu 39:
-SELECT TOP 1
+SELECT TOP 1 with ties
     e.empSSN,
     e.empName,
     COUNT(d.empSSN) AS NumberOfDependents
