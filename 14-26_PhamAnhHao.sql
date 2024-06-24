@@ -22,7 +22,7 @@ GROUP BY dp.depnum, dp.depName
 ORDER BY SoLuong ASC
 
 --Câu 18--
-SELECT TOP 1 dp.depnum, dp.depName, COUNT(*) as SoLuong
+SELECT TOP 1 with ties dp.depnum, dp.depName, COUNT(*) as SoLuong
 FROM tblDependent d
 JOIN tblEmployee e ON d.empSSN = e.empSSN
 JOIN tblDepartment dp ON e.depnum = dp.depnum
