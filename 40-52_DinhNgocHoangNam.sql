@@ -1,10 +1,4 @@
-﻿--Câu 39
-SELECT e.empSSN, e.empName, COUNT(d.depName) AS NumDependents
-FROM tblEmployee e
-LEFT JOIN tblDependent d ON e.empSSN = d.empSSN
-GROUP BY e.empSSN, e.empName
-ORDER BY NumDependents ASC
-OFFSET 0 ROWS FETCH NEXT 1 ROW ONLY;
+
 --Câu 40
 SELECT e.empSSN, e.empName, dep.depName
 FROM tblEmployee e
